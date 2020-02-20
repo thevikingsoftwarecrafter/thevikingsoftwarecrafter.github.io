@@ -1,0 +1,263 @@
+:root {
+    --color-blue: #0069D2;
+    --color-dark: #000;
+    --color-light: #FFF;
+    --background-color: var(--color-light);
+    --text-color: var(--color-dark);
+}
+
+/* General layout */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Merriweather";
+    -webkit-print-color-adjust: exact;
+}
+
+.row {
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-bottom: 25px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+a, a:hover, a:visited {
+    color: var(--color-blue);
+    cursor: pointer;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* Hierarchy */
+h1, h2, h3, h4, h5 {
+    font-family: "Merriweather";
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+h2 i, h3 i, h4 i {
+    color: var(--color-blue) !important;
+}
+
+h2 i.fa {
+    font-size: 20px;
+    margin-left: 1px;
+    margin-right: 1px;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
+h4, h5, h6 {
+    color: #000 !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    line-height: 24px;
+}
+
+h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+/* Container */
+.container {
+    position: relative;
+    border: 2px solid #EEE;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 35px 50px 75px 50px;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    font-size: 14px;
+}
+
+.sidebar h4 {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.name {
+    text-align: center;
+}
+
+.name h1 {
+    font-size: 26px;
+    color: var(--color-blue);
+}
+
+.name small {
+    color: #202020 !important;
+}
+
+/* Header */
+.punchcard {
+    position: absolute;
+    height: 140px;
+    top: 112px;
+    left: 2px;
+    right: 4px;
+    background: url('../img/punchcard.png') repeat-x;
+}
+
+.img-header {
+    margin-top: 61px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-lead {
+    margin-top: 109px;
+}
+
+.lead {
+    position: relative;
+    font-style: italic;
+    background: #202020 !important;
+    color: #FFF !important;
+    border: 3px solid #FFF;
+    border-radius: 20px;
+    box-shadow: none;
+    text-align: justify;
+}
+
+.lead .left-arrow{
+    position: absolute;
+    top: 38px;
+    left: -19px;
+}
+
+.lead .up-arrow{
+    position: absolute;
+    top: -20px;
+    left: 42%;
+}
+
+.lead .left-arrow polygon, .lead .up-arrow polygon {
+  fill: #202020;
+}
+
+/* Experience */
+.timetable {
+    font-style: italic;
+}
+
+.job-details {
+    margin-top: -5px;
+}
+
+/* Skills */
+.badge {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: #202020 !important;
+    color: #FFF !important;
+    margin-bottom: 5px;
+}
+
+p.skills {
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVE */
+
+/* Container too small to have margins */
+@media (max-width: 1300px) {
+    .container {
+        border-width: 0;
+        margin: 0;
+        width: auto;
+    }
+
+    .punchcard {
+        top: 0;
+        right: 2px;
+    }
+}
+
+/* Large screen breakpoint */
+@media (max-width: 1199px) {
+    .header-profile {
+        text-align: center;
+    }
+
+    .header-lead {
+        margin-top: 20px;
+    }
+
+    .punchcard {
+        background-position: center;
+    }
+
+    .img-header {
+        border: 3px solid #FFF;
+        margin-top: 4px;
+        width: 200px;
+    }
+
+    .sidebar {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .sidebar .col-xs-6 {
+        margin-top: 20px;
+    }
+}
+
+/* Medium screen breakpoint */
+@media (min-width: 992px) {
+    .md-align-right {
+        text-align: right;
+    }
+
+    h2.first {
+        margin-top: -30px;
+    }
+}
+
+/* Small screen breakpoint */
+@media (max-width: 991px) {
+    .xs-align-center {
+        text-align: center;
+    }
+}
+
+/* Titles are too long for small screens */
+@media (max-width: 420px) {
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Print */
+@media print {
+    body {
+        zoom: 1.2;
+    }
+
+    .lead  strong {
+        color: #FFF !important;
+    }
+}
